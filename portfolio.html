@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Personal Portfolio Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>My Portfolio</header>
+<nav>
+<a href="#about">About</a><br>
+<a href="#projects">Projects</a><br>
+<a href="#contacts">Contacts</a><br>
+</nav>
+<section id="about">
+<h1>About me</h1>
+<p>Hello, my name is Abha. I am from Pune, Maharashtra. I am learning in VIT Vellore in B.Tech CSE Data Science.</p>
+</section>
+<section id="projects">
+<h1>My Projects</h1>
+<h2>Sleep track</h2>
+<p>An app which tracks your sleep and tells you methods to help your sleep cycle and insomnia.</p>
+<h2>Rocketship</h2>
+<p>A fun game where you shoot meteors and gain points!</p>
+</section>
+<section id="contact">
+<h1>My contacts</h1>
+Mobile number: 9182736455<br>
+E-mail: xyz@gmail.com<br>
+Linked-in profile: linkedin.com/in/abc<br><br><br>
+
+
+<form name="f1">
+<title>Your contact information</title>
+Your name:<input type="text" name="t1" required size="100"><br>
+Phone number:<input type="tel" required><br>
+<button type="submit">Submit</form>
+<div id="formValidator"></div>
+</section>
+<button id="backToTop" class="back-to-top" title="Go to top">Back to top</button>
+<footer>
+2025 Portfolio. All rights reserved.</footer>
+
+<script type="text/JavaScript">
+window.onscroll = function()
+ {
+  let button = document.getElementById("backToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
+  {
+    button.style.display = "block";
+  } 
+  else 
+  {
+    button.style.display = "none";
+  }
+};
+
+
+document.getElementById("backToTop").onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+
+document.forms['f1'].onsubmit = function(event) {
+  const name = document.forms['f1']['t1'].value;
+  const phone = document.forms['f1']['phone'].value;
+
+
+  if (name === "" || phone === "") {
+    alert("Please fill out all fields.");
+    event.preventDefault(); 
+  }
+
+  
+  const phonePattern = /^[0-9]{10}$/;
+  if (!phone.match(phonePattern)) {
+    alert("Please enter a valid 10-digit phone number.");
+    event.preventDefault(); 
+  }
+};
+</script>
+
+
+</body>
+</html>

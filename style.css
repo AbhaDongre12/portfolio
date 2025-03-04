@@ -1,0 +1,8 @@
+body{ font-family:arial;background-color:yellow}
+nav{color:blue;line-spacing:5px}
+header{color:purple;text-align:center;font-size:30px}
+h1{text-align:center;color:green}
+.back-to-top:hover { background-color:pink}
+form{background-color:white;font-style:italic}
+#formValidator {color: red;font-size: 15px;text-align: center;margin-top: 10px}
+.back-to-top {background-color:white;padding: 10px}
